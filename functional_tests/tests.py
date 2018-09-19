@@ -85,10 +85,8 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertRegex(francrs_list_url, '/lists/.+')
         self.assertNotEqual(francrs_list_url, edith_list_url)
 
-        page_text = self.browser.find_element_by_tag_name('boby').text
+        page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Buy peacock feathers', page_text)
         self.assertIn('Buy milk', page_text)
 
-
-        # self.fail('Finish the test')
 

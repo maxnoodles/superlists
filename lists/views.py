@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from lists.models import Item, List
 
 
@@ -17,6 +16,7 @@ def new_list(request):
 def view_list(request, list_id):
     list_ = List.objects.get(id=list_id)
     return render(request, 'list.html', {'list': list_})
+
 
 def add_item(request, list_id):
     list_ = List.objects.get(id=list_id)

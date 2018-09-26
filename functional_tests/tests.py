@@ -4,9 +4,9 @@ import time
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium.common.exceptions import WebDriverException
 import os
-
-
 MAX_WAIT = 10
+
+
 class NewVisitorTest(StaticLiveServerTestCase):
 
     def setUp(self):

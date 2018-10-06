@@ -1,6 +1,5 @@
 from .base import FunctionalTest
 from selenium.webdriver.common.keys import Keys
-from unittest import skip
 MAX_WAIT = 10
 
 
@@ -18,7 +17,6 @@ class ItemValidationTest(FunctionalTest):
         self.browser.find_element_by_id('id_new_item').send_keys('Buy milk')
         self.browser.find_element_by_id('id_new_item').send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Buy milk')
-
         # 再次输入空列表
         self.browser.find_element_by_id('id_new_item').send_keys(Keys.ENTER)
 
